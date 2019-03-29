@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Photo info</title>
+</head>
+<body>
+	<h1>Photo info</h1>
+
+	<a href="/seller">Back</a> |
+	<a href="/logout">logout</a> 
+	<br>
+	<br>
+
+	<table border="1" width="400px" >
+		
+
+		<% for(var i=0; i < uList.length; i++){ %>
+		
+		
+
+			<tr><td><b>Photo Name</b>:
+			<%= uList[i].photoName %></td></tr>
+			<tr><td><b>Type:</b>
+			<%= uList[i].photoType %></td></tr>
+			<tr><td><b>Description:</b>
+			<%= uList[i].photoDescription %></td></tr>
+			<tr><td><b>Price:</b>
+			<%= uList[i].askingPrice %></td></tr>
+			<td><b>Photo</b></td>
+			<tr>
+			<td><img src='../assets/uploads/<%= uList[i].photo %> ' alt='error' width='800' height='400'><br/><br/><hr/></td>
+			
+
+			<td>
+				<a href="/seller/edit/<%= uList[i].pid %>">Edit</a> |
+				<a href="/seller/delete/<%= uList[i].pid %>">Delete</a> 
+			</td>
+
+		</tr>
+		<% } %>
+	</table>
+</body>
+</html>
+	

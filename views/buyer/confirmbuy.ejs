@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>buy Photo</title>
+</head>
+<body>
+
+<h1>Buy Photo</h1> 
+
+	<a href="/buyer">Back</a> |
+	<a href="/logout">logout</a> 
+	<br>
+	<br>
+
+	<table border="0" width="300px" >
+		<tr>
+			<td width="35%">Photo Name</td>
+			<td width="2%">:</td>
+			<td><%=photoName%></td>
+		</tr>
+		<tr>
+			<td>Photo Type</td>
+			<td>:</td>
+			<td><%=photoType%></td>
+		</tr>
+		<tr>
+			<td>Photo Description</td>
+			<td>:</td>
+			<td><%=photoDescription%></td>
+		</tr>
+		<tr>
+			<td>Price</td>
+			<td>:</td>
+			<td><%=price%></td>
+		</tr>
+		<tr>
+			<td>Photo</td>
+			<td>:</td>
+			<td><img src='../assets/server/<%=photo%> ' alt='error' width='800' height='400'></td>
+		</tr>
+	</table>
+<br>
+<b>Are you sure? this can't be undone if you click confirm!</b>
+
+<form method="post">
+		<input type="hidden" name="sellerid" value="<%=uid%>">
+		<input type="hidden" name="price" value="<%=price%>">
+		<input type="hidden" name="photoid" value="<%=pid%>">
+
+		<input type="submit" name="delete" value="Confirm">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User List</title>
+</head>
+<body>
+	<h1>User List</h1>
+
+	<a href="/home">Back</a> |
+	<a href="/logout">logout</a> 
+	<br>
+	<br>
+
+	<table border="1" width="400px" >
+		<tr>
+			<th>ID</th>
+			<th>USERNAME</th>
+			<th>EMAIL</th>
+			<th>PHONE</th>
+			<th>Balance</th>
+			<th>Action</th>
+		</tr>
+
+		<% for(var i=0; i < uList.length; i++){ %>
+		<tr>
+			<td><%= uList[i].uid %></td>
+			<td><%= uList[i].username %></td>
+			<td><%= uList[i].email %></td>
+			<td><%= uList[i].phone %></td>
+			
+			<td><%= uList[i].balance%></td>
+			<td>
+				<a href="/home/userUpdateInfo/<%= uList[i].uid %>">Edit</a> |
+				<a href="/home/delete/<%= uList[i].uid %>">Delete</a> 
+			</td>
+		</tr>
+		<% } %>
+	</table>
+</body>
+</html>

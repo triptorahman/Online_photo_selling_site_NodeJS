@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>confirm credit Page</title>
+</head>
+<body>
+
+<h1>Confirm Credit Request</h1> 
+
+	<a href="/home">Back</a> |
+	<a href="/logout">logout</a> 
+	<br>
+	<br>
+
+	<table border="0" width="300px" >
+		<tr>
+			<td width="35%">User ID</td>
+			<td width="2%">:</td>
+			<td><%=uid%></td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td>:</td>
+			<td><%=email%></td>
+		</tr>
+		<tr>
+			<td>Request Balance</td>
+			<td>:</td>
+			<td><%=credit%></td>
+		</tr>
+	</table>
+<br>
+<b>Are you sure? this can't be undone if you click confirm!</b>
+
+<form method="post">
+		<input type="hidden" name="uid" value="<%=uid%>">
+		<input type="hidden" name="balance" value="<%=credit%>">
+		<input type="submit" name="delete" value="Confirm">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit User</title>
+</head>
+<body>
+
+<h1>Edit User</h1> 
+
+	<a href="/home">Back</a> |
+	<a href="/logout">logout</a> 
+	<br>
+	<br>
+
+<form method="post">
+	<table border="0" width="300px" >
+		<tr>
+			<td width="35%">Photo Name</td>
+			<td width="2%">:</td>
+			<td><input type="text"  name="pname" value="<%=photoName%>" /></td>
+		</tr>
+		<tr>
+			<td>Photo Type</td>
+			<td>:</td>
+			<td><input type="text"  name="ptype" value="<%=photoType%>" /></td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>:</td>
+			<td><input type="text"  name="pdescription" value="<%=photoDescription%>"  /></td>
+		</tr>
+		<tr>
+			<td>Price</td>
+			<td>:</td>
+			<td><input type="text"  name="price" value="<%=askingPrice%>"  /></td>
+		</tr>
+		<tr>
+			<tr><img src='../assets/uploads/<%=photo%> ' alt='error' width='800' height='400'></tr>
+			<td><input type="hidden" name="imagename" value="<%=photo%>"></td>
+			<td><input type="hidden" name="userid" value="<%=uid%>"></td>
+			<td><input type="submit"  name="update" value="submit" /></td>
+		</tr>
+	</table>
+</form>
+
+</body>
+</html>
